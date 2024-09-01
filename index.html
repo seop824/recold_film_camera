@@ -1,0 +1,609 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>RECOLD</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"><script defer="defer" src="bundle.js"></script></head><body><style>/* @import url("~pretendard/dist/web/variable/pretendardvariable.css"); */
+			html,
+			body {
+			background-color: #000;
+			overflow: hidden;
+			color: #fff;
+			font-family: 'Pretendard', sans-serif;
+			/* background: url(/public/pattern.jpg) center center; */
+			background-size: 30px;
+			}
+			html *,
+			body * {
+			box-sizing: border-box;
+			margin: 0;
+			}
+			html canvas,
+			body canvas {
+			display: block;
+			}
+			html .container,
+			body .container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			flex-wrap: wrap;
+			gap: 1em 1em;
+			}
+			html .container .block,
+			body .container .block {
+			background-color: #fff;
+			color: #000;
+			padding: 1em;
+			border-radius: 10px;
+			line-height: 1em;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			box-shadow: 0 0 10px #fff;
+			animation: intro 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+			@keyframes intro {
+			0% {
+				opacity: 0;
+				transform: scale(1.5);
+			}
+			30% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+			}
+
+
+			/* .arrow {
+				display: flex;
+				position: fixed;
+				justify-content: center;
+				align-items: center;
+				width: 220px;
+				height: 60px;
+				left: 50%;
+				bottom: 7%;
+				gap: 20px;
+				transform: translate(-50%,0%);
+			}
+
+			.arrow > * {
+				flex: 2
+			}
+
+			.a {
+			color: #4E6AFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 5px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			bottom: 7%;
+			}
+
+			.b {
+			color: #4E6AFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 5px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			bottom: 7%;
+			}
+			
+
+			.navigator {
+				display: flex;
+				position: fixed;
+				justify-content: center;
+				align-items: center;
+				width: 380px;
+				height: 50px;
+				left: 50%;
+				bottom: 7%;
+				gap: 10px;
+				transform: translate(-50%,0%);
+			}
+
+			.navigator > * {
+				flex: 5
+			}
+		
+
+
+			.item4:hover {
+			background: #fff;
+			}
+
+			.close:hover {
+			background: #fff;
+			}
+
+			.open:hover {
+			background: #fff;
+			}
+
+
+
+
+			.open {
+			color: #4E6AFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			width: 75px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			bottom: 7%;
+			}
+			
+			.item4 {
+			color: #4E6AFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			width: 60px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			bottom: 7%;
+			}
+
+			.close {
+			color: #4E6AFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			width: 60px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			bottom: 7%;
+			}
+
+			
+			@media screen and (max-width: 650px) {
+				.navigator{
+					transform: translate(-50%,0%)scale(0.9);
+					width: 320px;
+					height: 18px;
+					gap: 0.1px;
+				}
+			
+				.logo {
+					transform: scale(0.65) translate(-20%,0%);
+
+				} 
+			}
+			
+			.logo {
+				display: flex;
+				position: fixed;
+				top: 3.5%;
+				left: 5%;
+				justify-content: center;
+			}*/
+
+
+
+
+
+			/* FILM CAMERA */
+
+			.navigator5 > .film:hover {
+			background: #fff;
+
+			}
+			.film {
+			color: #4E6AFF;
+			display: flex;
+			position: fixed;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			width: 75px;
+			height: 60px;
+			border-radius: 5px;
+			overflow: hidden;
+			left: 50%;
+			bottom: 7%;
+			}
+			@media screen and (max-width: 650px) {
+				.film {
+					transform: translate(-45%,0%);
+				}
+			} 
+
+
+			
+
+
+
+
+
+			/* LP PLAYER */
+			
+
+			/* .lp {
+				display: flex;
+				position: fixed;
+				justify-content: center;
+				align-items: center;
+				width: 200px;
+				height: 60px;
+				right: 0%;
+				gap: 10px;
+				transform: translate(-50%,0%);
+				bottom: 7%;
+			}
+
+			.lp > .a:hover{
+				background-color: #fff;
+			}
+			.lp > .b:hover{
+				background-color: #ffffff;
+			}
+			.lp > .c:hover{
+				background-color: #ffffff;
+			}
+
+
+			.a {
+				position: flex;
+				display: flex;
+				width: 60px;
+				height: 60px;
+				border-radius: 8px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				overflow: hidden;
+
+			}
+
+			.b {
+				position: flex;
+				display: flex;
+				width: 60px;
+				height: 60px;
+				border-radius: 8px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				overflow: hidden;
+
+			}
+
+			.c {
+				position: flex;
+				display: flex;
+				width: 60px;
+				height: 60px;
+				border-radius: 8px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				overflow: hidden;
+
+			} */
+
+
+
+
+
+			/* VENDING MACHINE */
+			
+
+			/* .vending {
+				display: flex;
+				position: fixed;
+				justify-content: center;
+				align-items: center;
+				width: 130px;
+				height: 60px;
+				left: 50%;
+				gap: 10px;
+				transform: translate(-50%,0%);
+				bottom: 7%;
+			}
+
+			.vending > .coin:hover{
+				background-color: #fff;
+			}
+			.vending > .reload:hover{
+				background-color: #ffffff;
+			}
+
+
+			.coin {
+				position: flex;
+				display: flex;
+				width: 60px;
+				height: 60px;
+				border-radius: 8px;
+				justify-content: center;
+				align-items: center;
+				top: 50%;
+				cursor: pointer;
+				overflow: hidden;
+
+			}
+
+			.reload {
+				position: flex;
+				display: flex;
+				width: 60px;
+				height: 60px;
+				border-radius: 8px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				overflow: hidden;
+
+			} */
+			
+
+
+
+
+
+			/* vending popup */
+		
+			/* .yellow___contain.pop{
+				opacity: 100%;
+			}
+
+			.yellow___contain{
+				top: 50%;
+				left: 50%;
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				transition: all .3s;
+				opacity: 0; 
+				pointer-events: none;
+			}
+
+			.yellow___content{
+				position: fixed;
+				background-color: #ececec;
+				text-align: center;
+				overflow: hidden;
+				padding: 2rem 2rem 2rem;
+				border-radius: 0.75rem;
+				transition: all .3s;
+				pointer-events: none;
+				transform: translateY(10%);
+			}
+			
+			.yellow___img{
+				width: 150px;
+				margin-bottom: .75rem;
+				pointer-events: none;
+			}
+
+			.yellow__title{
+				font-family: 'GmarketSansMedium';
+				font-size: 1.5rem;
+				letter-spacing: -.15rem;
+				color: #000000;
+				font-weight: 700;
+				margin: .3rem;
+				pointer-events: none;
+			}
+
+			.yellow__description{
+				font-size: 10px;
+				color: #666666;
+				margin-bottom: 1rem;
+				pointer-events: none;
+			}
+
+
+
+
+
+			.purple___contain.pop{
+				opacity: 100%;
+			}
+
+			.purple___contain{
+				top: 50%;
+				left: 50%;
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				transition: all .3s;
+				opacity: 0; 
+				pointer-events: none;
+			}
+
+			.purple___content{
+				position: fixed;
+				background-color: #ececec;
+				text-align: center;
+				overflow: hidden;
+				padding: 2rem 2rem 2rem;
+				border-radius: 0.75rem;
+				transition: all .3s;
+				pointer-events: none;
+				transform: translateY(10%);
+			}
+			
+			.purple___img{
+				width: 150px;
+				margin-bottom: .75rem;
+				pointer-events: none;
+			}
+
+			.purple__title{
+				font-family: 'GmarketSansMedium';
+				font-size: 1.5rem;
+				letter-spacing: -.15rem;
+				color: #000000;
+				font-weight: 700;
+				margin: .3rem;
+				pointer-events: none;
+			}
+
+			.purple__description{
+				font-size: 10px;
+				color: #666666;
+				margin-bottom: 1rem;
+				pointer-events: none;
+			}
+
+
+
+
+
+
+
+			.blue___contain.pop{
+				opacity: 100%;
+			}
+
+			.blue___contain{
+				top: 50%;
+				left: 50%;
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				transition: all .3s;
+				pointer-events: none;
+				opacity: 0; 
+			}
+
+			.blue___content{
+				position: fixed;
+				background-color: #ececec;
+				text-align: center;
+				overflow: hidden;
+				padding: 2rem 2rem 2rem;
+				border-radius: 0.75rem;
+				transition: all .3s;
+				pointer-events: none;
+				transform: translateY(10%);
+			}
+			
+			.blue___img{
+				width: 150px;
+				margin-bottom: .75rem;
+				pointer-events: none;
+			}
+
+			.blue__title{
+				font-family: 'GmarketSansMedium';
+				font-size: 1.5rem;
+				letter-spacing: -.15rem;
+				color: #000000;
+				font-weight: 700;
+				margin: .3rem;
+				pointer-events: none;
+			}
+
+			.blue__description{
+				font-size: 10px;
+				color: #666666;
+				margin-bottom: 1rem;
+				pointer-events: none;
+			}  */
+
+
+			/* @media screen and (max-width: 650px ) and ( max-height: 1000px) {
+				.loader{
+					transform: scale(0.8);
+				}
+				.progress{
+					transform: scale(0.5);
+					transform: translate(0%,-100%);
+				}
+			} 
+
+
+
+
+			/* 로딩화면 */
+
+			.dimmer {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #111 ;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				transition: 1s;
+			}
+			
+			.dimmer.end{
+				opacity: 0;
+				pointer-events: none;
+
+			}
+			
+			.loader{
+				width: 190px;
+				height: 190px;
+				border: 2px solid #111111;
+				background:url(./misc/Rectangle.png);
+				border-radius: 100px 100px 100px 100px;
+				background-repeat: repeat-x;
+				background-position: 0px 190px;
+				animation: fill 3.5s infinite;
+			}
+
+			@keyframes fill{
+				0%{
+					background-position: 0px 204px;
+				}
+				20%{
+					background-position: 0px 160px;
+				}
+				40%{
+					background-position: 0px 120px;
+				}
+				80%{
+					background-position: 0px 40px;
+				}
+				100%{
+					background-position: 0px 0px;
+				}
+			}
+
+			.progress {
+				transform: translate(0%,-150%);
+			
+				display: flex;
+			} 
+
+
+
+			@font-face {
+   				font-family: 'GmarketSansMedium';
+    			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    			font-weight: normal;
+    			font-style: normal;
+				}</style><div class="navigator5"><div class="film"><svg width="60" height="40" viewBox="0 0 41 27" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_19_58)"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 0.75C27.3096 0.75 26.75 1.30964 26.75 2V3.12889C26.1564 3.52621 25.7625 4.19847 25.7503 4.96347H2.00487C1.31451 4.96347 0.754868 5.52311 0.754868 6.21347V12.9026C0.754868 13.593 1.31451 14.1526 2.00487 14.1526H6.15813C7.67691 14.1526 8.90813 15.3839 8.90813 16.9026V20.7643C8.90813 21.4546 9.46777 22.0143 10.1581 22.0143H25.75C25.7549 22.7885 26.1507 23.4699 26.75 23.8711V25C26.75 25.6904 27.3096 26.25 28 26.25H38C38.6904 26.25 39.25 25.6904 39.25 25V23.8711C39.853 23.4675 40.25 22.7801 40.25 22V5C40.25 4.2199 39.853 3.53252 39.25 3.12889V2C39.25 1.30964 38.6904 0.75 38 0.75H28ZM38 3.25H28C27.0335 3.25 26.25 4.0335 26.25 5V5.75H33.25V21.25H26.25V22C26.25 22.9665 27.0335 23.75 28 23.75H38C38.9665 23.75 39.75 22.9665 39.75 22V5C39.75 4.0335 38.9665 3.25 38 3.25ZM38 2.75H38.75V2C38.75 1.58579 38.4142 1.25 38 1.25H28C27.5858 1.25 27.25 1.58579 27.25 2V2.75H28H38ZM2.00487 5.46347H25.75V5.75V21.25V21.5143H10.1581C9.74392 21.5143 9.40813 21.1785 9.40813 20.7643V16.9026C9.40813 15.1077 7.95305 13.6526 6.15813 13.6526H2.00487C1.59065 13.6526 1.25487 13.3169 1.25487 12.9026V6.21347C1.25487 5.79926 1.59065 5.46347 2.00487 5.46347ZM28 24.25H38H38.75V25C38.75 25.4142 38.4142 25.75 38 25.75H28C27.5858 25.75 27.25 25.4142 27.25 25V24.25H28ZM26.25 6.25V20.75H32.75V6.25H26.25ZM6.75 7C6.75 6.58579 7.08579 6.25 7.5 6.25H8.5C8.91421 6.25 9.25 6.58579 9.25 7V8C9.25 8.41421 8.91421 8.75 8.5 8.75H7.5C7.08579 8.75 6.75 8.41421 6.75 8V7ZM7.5 6.75C7.36193 6.75 7.25 6.86193 7.25 7V8C7.25 8.13807 7.36193 8.25 7.5 8.25H8.5C8.63807 8.25 8.75 8.13807 8.75 8V7C8.75 6.86193 8.63807 6.75 8.5 6.75H7.5ZM3.5 6.25C3.08579 6.25 2.75 6.58579 2.75 7V8C2.75 8.41421 3.08579 8.75 3.5 8.75H4.5C4.91421 8.75 5.25 8.41421 5.25 8V7C5.25 6.58579 4.91421 6.25 4.5 6.25H3.5ZM3.25 7C3.25 6.86193 3.36193 6.75 3.5 6.75H4.5C4.63807 6.75 4.75 6.86193 4.75 7V8C4.75 8.13807 4.63807 8.25 4.5 8.25H3.5C3.36193 8.25 3.25 8.13807 3.25 8V7ZM10.75 7C10.75 6.58579 11.0858 6.25 11.5 6.25H12.5C12.9142 6.25 13.25 6.58579 13.25 7V8C13.25 8.41421 12.9142 8.75 12.5 8.75H11.5C11.0858 8.75 10.75 8.41421 10.75 8V7ZM11.5 6.75C11.3619 6.75 11.25 6.86193 11.25 7V8C11.25 8.13807 11.3619 8.25 11.5 8.25H12.5C12.6381 8.25 12.75 8.13807 12.75 8V7C12.75 6.86193 12.6381 6.75 12.5 6.75H11.5ZM15.5 6.25C15.0858 6.25 14.75 6.58579 14.75 7V8C14.75 8.41421 15.0858 8.75 15.5 8.75H16.5C16.9142 8.75 17.25 8.41421 17.25 8V7C17.25 6.58579 16.9142 6.25 16.5 6.25H15.5ZM15.25 7C15.25 6.86193 15.3619 6.75 15.5 6.75H16.5C16.6381 6.75 16.75 6.86193 16.75 7V8C16.75 8.13807 16.6381 8.25 16.5 8.25H15.5C15.3619 8.25 15.25 8.13807 15.25 8V7ZM10.75 19C10.75 18.5858 11.0858 18.25 11.5 18.25H12.5C12.9142 18.25 13.25 18.5858 13.25 19V20C13.25 20.4142 12.9142 20.75 12.5 20.75H11.5C11.0858 20.75 10.75 20.4142 10.75 20V19ZM11.5 18.75C11.3619 18.75 11.25 18.8619 11.25 19V20C11.25 20.1381 11.3619 20.25 11.5 20.25H12.5C12.6381 20.25 12.75 20.1381 12.75 20V19C12.75 18.8619 12.6381 18.75 12.5 18.75H11.5ZM19.5 6.25C19.0858 6.25 18.75 6.58579 18.75 7V8C18.75 8.41421 19.0858 8.75 19.5 8.75H20.5C20.9142 8.75 21.25 8.41421 21.25 8V7C21.25 6.58579 20.9142 6.25 20.5 6.25H19.5ZM19.25 7C19.25 6.86193 19.3619 6.75 19.5 6.75H20.5C20.6381 6.75 20.75 6.86193 20.75 7V8C20.75 8.13807 20.6381 8.25 20.5 8.25H19.5C19.3619 8.25 19.25 8.13807 19.25 8V7ZM14.75 19C14.75 18.5858 15.0858 18.25 15.5 18.25H16.5C16.9142 18.25 17.25 18.5858 17.25 19V20C17.25 20.4142 16.9142 20.75 16.5 20.75H15.5C15.0858 20.75 14.75 20.4142 14.75 20V19ZM15.5 18.75C15.3619 18.75 15.25 18.8619 15.25 19V20C15.25 20.1381 15.3619 20.25 15.5 20.25H16.5C16.6381 20.25 16.75 20.1381 16.75 20V19C16.75 18.8619 16.6381 18.75 16.5 18.75H15.5ZM23.5 6.25C23.0858 6.25 22.75 6.58579 22.75 7V8C22.75 8.41421 23.0858 8.75 23.5 8.75H24.5C24.9142 8.75 25.25 8.41421 25.25 8V7C25.25 6.58579 24.9142 6.25 24.5 6.25H23.5ZM23.25 7C23.25 6.86193 23.3619 6.75 23.5 6.75H24.5C24.6381 6.75 24.75 6.86193 24.75 7V8C24.75 8.13807 24.6381 8.25 24.5 8.25H23.5C23.3619 8.25 23.25 8.13807 23.25 8V7ZM18.75 19C18.75 18.5858 19.0858 18.25 19.5 18.25H20.5C20.9142 18.25 21.25 18.5858 21.25 19V20C21.25 20.4142 20.9142 20.75 20.5 20.75H19.5C19.0858 20.75 18.75 20.4142 18.75 20V19ZM19.5 18.75C19.3619 18.75 19.25 18.8619 19.25 19V20C19.25 20.1381 19.3619 20.25 19.5 20.25H20.5C20.6381 20.25 20.75 20.1381 20.75 20V19C20.75 18.8619 20.6381 18.75 20.5 18.75H19.5ZM23.5 18.25C23.0858 18.25 22.75 18.5858 22.75 19V20C22.75 20.4142 23.0858 20.75 23.5 20.75H24.5C24.9142 20.75 25.25 20.4142 25.25 20V19C25.25 18.5858 24.9142 18.25 24.5 18.25H23.5ZM23.25 19C23.25 18.8619 23.3619 18.75 23.5 18.75H24.5C24.6381 18.75 24.75 18.8619 24.75 19V20C24.75 20.1381 24.6381 20.25 24.5 20.25H23.5C23.3619 20.25 23.25 20.1381 23.25 20V19Z" fill="#A1B3FF"/></g><defs><clipPath id="clip0_19_58"><rect width="41" height="27" fill="white"/></clipPath></defs></svg></div></div><div class="dimmer"><div class="loader"><div class="progress"><svg width="200" height="36.54" viewBox="0 0 193 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M163.066 1.71997H178.506C180.666 1.71997 182.586 2.11997 184.346 2.91997C186.026 3.75997 187.506 4.87997 188.706 6.27997C189.906 7.71997 190.826 9.35997 191.466 11.28C192.066 13.24 192.386 15.36 192.386 17.6C192.386 19.96 192.026 22.12 191.386 24.04C190.666 26.04 189.666 27.72 188.386 29.12C187.026 30.52 185.426 31.64 183.506 32.44C181.546 33.2 179.306 33.6 176.786 33.6H163.066V1.71997ZM171.386 26.72H176.306C177.586 26.72 178.746 26.48 179.746 25.96C180.706 25.48 181.506 24.84 182.146 23.96C182.786 23.16 183.266 22.16 183.586 21.04C183.906 19.92 184.066 18.76 184.066 17.48C184.066 16.28 183.866 15.12 183.506 14C183.106 12.96 182.586 12 181.906 11.2C181.186 10.4 180.306 9.75997 179.266 9.27997C178.226 8.83997 177.026 8.59997 175.666 8.59997H171.386V26.72Z" fill="#4E6AFF"/><path d="M135.917 1.71997H144.237V26.72H159.477V33.6H135.917V1.71997Z" fill="#4E6AFF"/><path d="M63.125 17.64C63.125 15.2 63.565 12.96 64.485 10.88C65.365 8.84 66.565 7.08 68.165 5.56C69.685 4.12 71.525 2.96 73.685 2.12C75.805 1.32 78.085 0.880005 80.565 0.880005C83.845 0.880005 86.725 1.56 89.125 2.88C91.525 4.24 93.685 6.24001 95.605 8.88L90.125 13.48C89.125 11.72 87.885 10.32 86.405 9.28C84.885 8.24 83.005 7.72 80.765 7.72C79.365 7.72 78.085 8 76.965 8.48C75.805 9.00001 74.845 9.68001 74.045 10.56C73.205 11.48 72.565 12.52 72.125 13.72C71.645 14.96 71.445 16.28 71.445 17.64C71.445 19.04 71.645 20.32 72.125 21.52C72.525 22.72 73.165 23.76 74.005 24.64C74.805 25.56 75.805 26.28 77.005 26.76C78.125 27.28 79.405 27.52 80.845 27.52C81.965 27.52 83.005 27.4 83.965 27.12C84.845 26.88 85.685 26.48 86.485 25.96C87.205 25.48 87.925 24.84 88.565 24.12C89.165 23.4 89.725 22.6 90.285 21.68L95.645 26.44C93.805 29 91.725 30.92 89.325 32.32C86.885 33.68 83.965 34.4 80.565 34.4C78.085 34.4 75.805 33.96 73.685 33.16C71.525 32.32 69.685 31.16 68.165 29.72C66.565 28.24 65.365 26.48 64.485 24.4C63.565 22.36 63.125 20.12 63.125 17.64Z" fill="#4E6AFF"/><path d="M58.0041 13.88V20.76H42.2841V26.76H59.1641V33.6H33.9641V1.71997H58.7641V8.59997H42.2841V13.88H58.0041Z" fill="#4E6AFF"/><path d="M0.799988 1.71997H18.68C20.04 1.71997 21.36 1.91997 22.6 2.27997C23.8 2.67997 24.84 3.23996 25.72 3.95996C26.6 4.75996 27.28 5.71998 27.8 6.91998C28.28 8.11998 28.56 9.55997 28.56 11.16C28.56 13.32 28.2 15.0399 27.48 16.3199C26.76 17.6799 25.68 18.72 24.28 19.52L30.36 33.6H21.68L16.72 21.92L9.11999 22V33.6H0.799988V1.71997ZM20.28 11.36C20.28 10.64 20.04 9.95996 19.56 9.39996C19.04 8.87996 18.36 8.59998 17.56 8.59998H9.11999V15L16.72 14.92C18.08 14.68 19 14.24 19.52 13.6C20 12.96 20.28 12.24 20.28 11.36Z" fill="#4E6AFF"/><path d="M127.211 5.12873C123.905 1.82205 119.506 0 114.826 0C110.146 0 105.771 1.8419 102.461 5.15255C95.6331 11.9803 95.6331 23.0515 102.461 29.8792C109.289 36.7069 120.36 36.7069 127.187 29.8792C127.187 29.8792 132.34 25.1077 132.34 17.5139C132.34 12.8337 130.518 8.43541 127.211 5.12873ZM108.094 24.2463C104.374 20.5268 104.374 14.501 108.094 10.7814C111.793 7.08177 117.835 7.10559 121.535 10.8053C125.23 14.501 125.242 20.5546 121.551 24.2543C117.831 27.9659 111.809 27.9619 108.094 24.2463ZM122.15 24.8378C124.091 22.8848 125.187 20.2728 125.187 17.5139C125.187 14.755 124.107 12.143 122.15 10.186C120.193 8.22899 117.593 7.14926 114.822 7.14926C112.051 7.14926 109.443 8.23693 107.49 10.1781L106.43 9.11818C111.063 4.50947 118.597 4.49359 123.218 9.11818C127.842 13.7428 127.834 21.285 123.226 25.9175L122.146 24.8378H122.15ZM123.837 26.5249C128.787 21.555 128.803 13.4649 123.837 8.50289C118.875 3.54089 110.785 3.5528 105.815 8.50289L104.743 7.4311C107.435 4.75162 111.023 3.25508 114.822 3.25508C118.621 3.25508 122.21 4.73971 124.905 7.4311C130.462 12.9885 130.462 22.0353 124.905 27.5927L123.833 26.5209L123.837 26.5249ZM126.592 29.2798L125.524 28.212C131.423 22.3131 131.423 12.7146 125.524 6.81581C122.666 3.9577 118.867 2.38573 114.826 2.38573C110.785 2.38573 106.986 3.97357 104.132 6.81978L103.096 5.78371C106.236 2.65567 110.396 0.877283 114.83 0.877283C119.264 0.877283 123.456 2.60803 126.596 5.75196C129.74 8.89588 131.471 13.0759 131.471 17.5179C131.471 21.9599 129.74 26.1438 126.596 29.2838L126.592 29.2798Z" fill="#4E6AFF"/></svg></div></div></div></body></html>
